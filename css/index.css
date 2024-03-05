@@ -43,18 +43,24 @@ html{
 }
 .special-heading p{
     top: 0;
-    margin: 0;
+    margin: 30px 0 0 0;
 }
 .special-heading h2{
     color: var(--secondary-color);
     font-size: 50px;
-    font-weight: 400;
+    font-weight: 600;
     margin-top: 0;
     letter-spacing: -2px;
 }
 .special-heading:hover{
     cursor: default;
 }
+@media (max-width: 991px){
+    .special-heading h2{
+        font-size: 35px;
+    }
+}
+
 @keyframes rotation{
     from{
         transform: rotate(0);
@@ -93,7 +99,7 @@ html{
     background-image: url(/imgs/back2.jpg);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     position: relative;
     z-index: 0;
 }
@@ -110,6 +116,8 @@ html{
     height: 100px;
     position: static;
     z-index: 3;
+    position: sticky;
+    top: -20px;
 }
 .header .container{
     display: flex;
@@ -118,6 +126,7 @@ html{
     background-color: var(--secondary-color);
     border-radius: 0 0 15px;
     border: 2px solid white;
+    transition: .5s;
 }
 .header .logo img{
     width: 150px;
@@ -170,12 +179,18 @@ nav .icon{
     display: none;
     flex-wrap: wrap;
     justify-content: flex-end;
+    position: relative;
 }
 nav .icon span{
     background-color: white;
     width: 100%;
     height: 3px;
     margin-bottom: 5px;
+}
+@media (max-width: 991px){
+    nav ul a{
+        font-size: 17px;
+    }
 }
 @media (max-width: 767px){
     .header .logo{
@@ -184,21 +199,22 @@ nav .icon span{
     nav ul{
         display: none;
         position: absolute;
-        flex-direction: column;
-        right: -30px;
-        top: 50px;
-        background-color: #e7e2e263;
+        /* flex-direction: column; */
+        right: -40px;
+        top: 40px;
         min-width: 150px;
-        padding: 0;
+        column-gap: 10px;
+        padding: 0 ;
+        border-radius: 0 5px 0 0;
     }
     nav ul::before{
         content: "";
         position: absolute;
         background-color: transparent;
-        width: 100%;
-        height: 100px;
-        top: -50px;
-        left: 0;
+        width: 50px;
+        height: 70px;
+        top: -35px;
+        right: 0;
         
     }
     nav li{
@@ -206,15 +222,16 @@ nav .icon span{
     }
     nav li a{
         width: 100%;
-        padding: 10px 10px;
-        font-size: 18px;
+        padding: 10px 7px;
+        font-size: 15px;
         font-weight: 200;
         transition-duration: .2s;
         margin: 0;
     }
-    nav li a::after{
-        display: none;
-    }
+    /* .header .container:has(.links:hover){
+        height: 125px;
+        align-items: normal;
+    } */
     nav .icon{
         display: flex;
     }
@@ -233,16 +250,13 @@ nav .icon span{
     nav .links:hover ul{
         display: flex;
     }
-    nav ul li:hover a {
-        transform: translateX(15px);
-    }
-    nav ul li:hover {
-        background-color: white;
-    }
 }
-@media (max-width: 991px){
-    nav ul a{
-        font-size: 17px;
+@media (max-width: 480px){
+    nav ul{
+        right: -25px;
+        top: 40px;
+        min-width: 150px;
+        column-gap: 0px;
     }
 }
 /* End Header Section */
@@ -264,6 +278,7 @@ nav .icon span{
 .intro .content .text{
     color: white;
     text-align: center;
+    margin-bottom: 0;
 }
 .intro .text h2{
     font-size: 50px;
@@ -272,42 +287,31 @@ nav .icon span{
 }
 .intro .text p{
     max-width: 400px;
-    margin: 30px 0;
+    margin-bottom: 0;
 }
 .intro .content .logo{
-    
+    padding: 0;
+    margin: 0;
 }
 .intro .content img{
     width: 500px;
 }
 
 @media (max-width: 991px){
+    .intro .logo img{
+        width: 350px;
+    }
+    
+}
+@media (max-width: 767px){
     .intro .content{
         flex-direction: column;
+        justify-content: space-evenly;
         margin-top: 10px;
     }
     .intro .profile img{
-        width: 250px;
-        height: 250px;
-        margin-bottom: 20px;
-    }
-}
-@media (max-width: 767px){
-    .intro .me .myname{
-        font-size: 40px;
-    }
-    .intro .me .job{
-        font-size: 25px;
-    }
-    .intro .profile img{
         width: 220px;
-        height: 220px;
     }
-}
-.intro .info{
-    display: flex;
-    justify-content: center;
-    column-gap: 15px;
 }
 .intro .info button{
     font-size: 14px;
@@ -321,125 +325,8 @@ nav .icon span{
     border: 2px solid black;
     transition-duration: .3s;
 }
-.intro .info .bt2{
-    background-color: black;
-    color: white;
-    border: 2px solid black;
-    transition-duration: .3s;
-}
 .intro .info .bt1:hover{
     background-color: black;
     color: white;
     cursor: pointer;
 }
-.intro .info .bt2:hover{
-    background-color: white;
-    color: black;
-    border : 2px solid black;
-    cursor: pointer;
-
-}
-.intro .social{
-    display: flex;
-    justify-content: center;
-    column-gap: 25px;
-}
-.intro .social img{
-    width: 30px;
-    transition: 0.3s;
-}
-.intro .social img:hover{
-    opacity: .6;
-}
-/* end intro section */
-/* Start About Me section */
-.about{
-    padding: 60px 20px;
-}
-.about .content{
-    display: flex;
-    column-gap: 70px;
-    align-items: center;
-}
-.about .profile{
-    overflow: hidden;
-    width: 2000px;
-    border-radius: 30px;
-    text-align: center;
-}
-.about .profile img{
-    max-width: 100%;
-    border-radius: 30px;
-    transition: .5s;
-}
-.about .profile img:hover{
-    transform: scale(1.05);
-}
-.about .col img{
-    width: 60px;
-    transition: .3s;
-}
-.about .col img:hover{
-    opacity: .6;
-}
-.about .cols{
-    display: grid;
-    grid-template-columns: repeat(2,minmax(100px,1fr));
-    column-gap: 20px;
-}
-.about .cols .col{
-    text-align: center;
-    border: 2px solid #A3A3A3;
-    border-radius: 20px;
-    padding: 10px;
-}
-.about .col h3{
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin: 0;
-}
-.about .col p{
-    padding: 8px 0 0 0;
-    margin: 0;
-    font-weight: 400;
-    color: var(--main-color);
-}
-.about .col:hover{
-    cursor: default;
-}
-.about .descript{
-    color: #777;
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.5;
-}
-@media (min-width: 1200px) {
-    .about .cols{
-        grid-template-columns: repeat(2,minmax(320px,1fr));
-    }
-}
-@media (max-width: 1200px) {
-    .about .content{
-        flex-wrap: wrap;
-        justify-content: center;
-        row-gap: 20px;
-    }
-    .about .profile {
-        width:350px;
-    }
-    
-}
-@media (max-width: 991px) {
-    .about .profile {
-        width:320px;
-    }
-}
-@media (max-width: 767px) {
-    .about .profile {
-        width:320px;
-    }
-    .about .col h3{
-        font-size: 16px;
-    }
-}
-/* End About Me section */
