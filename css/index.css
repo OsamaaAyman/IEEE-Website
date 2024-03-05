@@ -48,7 +48,7 @@ html{
 .special-heading h2{
     color: var(--secondary-color);
     font-size: 50px;
-    font-weight: 600;
+    font-weight: 800;
     margin-top: 0;
     letter-spacing: -2px;
 }
@@ -99,7 +99,7 @@ html{
     background-image: url(/imgs/back2.jpg);
     background-size: cover;
     background-position: center;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     position: relative;
     z-index: 0;
 }
@@ -124,7 +124,7 @@ html{
     justify-content: space-between;
     align-items: center;
     background-color: var(--secondary-color);
-    border-radius: 0 0 15px;
+    border-radius:  15px;
     border: 2px solid white;
     transition: .5s;
 }
@@ -146,6 +146,7 @@ nav ul{
     list-style: none;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     column-gap: 25px;
     margin: 15px;
 }
@@ -174,6 +175,39 @@ nav li a::after{
 nav li a:hover::after{
     width: 100%;
 }
+.header .but{
+    position: relative;
+}
+.header button{
+    font-size: 18px;
+    padding: 8px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+.header .bt1{
+    background-color: white;
+    color: var(--secondary-color);
+    border-color: transparent;
+    transition-duration: .3s;
+    position: relative;
+    z-index: 4;
+}
+.header .bt1::before{
+    content: "";
+    background-color: black;
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    border-radius: 7px;
+    left: 20px;
+    top: 10px;
+    z-index: 3;
+}
+.header .bt1:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
 nav .icon{
     width: 30px;
     display: none;
@@ -195,6 +229,9 @@ nav .icon span{
 @media (max-width: 767px){
     .header .logo{
         font-size: 27px;
+    }
+    .header .but{
+        display: none;
     }
     nav ul{
         display: none;
@@ -279,6 +316,7 @@ nav .icon span{
     color: white;
     text-align: center;
     margin-bottom: 0;
+    padding-bottom: 50px;
 }
 .intro .text h2{
     font-size: 50px;
@@ -313,20 +351,239 @@ nav .icon span{
         width: 220px;
     }
 }
-.intro .info button{
-    font-size: 14px;
-    padding: 15px;
-    border-radius: 40px;
-    font-weight: bold;
+/* End intro Section */
+/* Start Announce Section */
+.announce .content{
+    display: flex;
+    justify-content: center;
 }
-.intro .info .bt1{
+.announce .phone{
+    position: relative;
+}
+.announce .content .phone .gif{
+    width: 500px;
+}
+.announce .content .appicon{
+    width: 80px;
+    height: 85px;
+    position: absolute;
+    left: 67px;
+    top:210px ;
+}
+@media (max-width: 991px){
+    .announce .content .phone .gif{
+        width: 300px;
+    }
+    .announce .content .appicon{
+        width: 50px;
+        height: 55px;
+        position: absolute;
+        left: 40px;
+        top:120px ;
+    }
+}
+/* End Announce Section */
+/* Start Events Section */
+.event-section .title h2 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.event-section .title h2 span {
+    position: relative;
+}
+.event-section .title h2 span::before {
+    position: absolute;
+    content: "";
+    background-image: url("https://thepixelcurve.com/html/meeta/meeta/assets/images/shape/title-shape.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    bottom: -57px;
+    left: 37px;
+}
+.event-section .wrapper {
+    position: relative;
+    margin-top: 3rem;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+.event-details-container {
+    margin: auto;
+    max-width: 520px;
+    width: 100%;
+    height: 450px;
     background-color: white;
-    color: black;
-    border: 2px solid black;
-    transition-duration: .3s;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
 }
-.intro .info .bt1:hover{
-    background-color: black;
+.event-details-container .title {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 4rem;
+    font-size: 50px;
+    text-align: center;
+    background: -webkit-linear-gradient(330deg, #1580c8, #7ac0d0);
+    /* -webkit-linear-gradient(330deg, #0694f3, #56cdf7) */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+}
+.event-details-container .details {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    color: #8c8989;
+    font-size: 15px;
+}
+.details div {
+    margin-right: 0.5rem;
+}
+.event-details-container .details .icon {
+    margin-right: 6px;
+    color: #4d89fa;
+}
+
+.event-details-container .countdown {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.event-details-container .countdown .box {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+.event-details-container .countdown .box .time {
+  /* background-color: rgb(6, 135, 255); */
+    padding: 1.1rem 1.5rem;
+    border-radius: 5px;
+    color: rgb(6, 135, 255);
+    font-family: "Roboto", Courier, monospace;
+    font-weight: 700;
+    font-size: 30px;
+    cursor: default;
+}
+.event-details-container .countdown .box::before {
+    content: ":";
+    font-size: 36px;
+    right: -7.5%;
+    top: 12px;
+    position: absolute;
+}
+
+.event-details-container .countdown .box .text {
+    font-family: "Roboto", Courier, monospace;
+    font-weight: 500;
+    font-size: 20px;
+    color: #8c8989;
+}
+
+.tickets {
+    margin-top: 3rem;
+}
+
+.tickets button {
+    position: relative;
+    padding: 1rem 2rem;
     color: white;
-    cursor: pointer;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    z-index: 1;
 }
+.tickets button::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transform: scale(0, 1);
+    transform-origin: top left;
+    transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+    z-index: -1;
+}
+
+.tickets button:hover {
+    color: #007bff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tickets button:hover::before {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: scale(1, 1);
+}
+
+.slider {
+    width: 100%;
+    position: relative;
+    height: 590px;
+    overflow: hidden;
+    background-color: white;
+}
+.slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    transition: transform 1s cubic-bezier(0.5, 0.25, 0, 1);
+    transform: translateX(-100%);
+    z-index: -2313;
+}
+.slider .slide.active {
+    transform: translateX(0);
+    z-index: 1;
+}
+.slider .slide.prev {
+    transform: translateX(60%);
+    z-index: 1;
+}
+.slider .slide.slide-out {
+    transform: translateX(100%);
+    z-index: 1;
+}
+
+.slider .slide img {
+    width: 600px;
+    height: 100%;
+}
+
+@media only screen and (max-width: 862px) {
+    .container {
+    width: 100%;
+}
+
+.slider .slide.prev {
+    transform: translateX(100%);
+}
+.slider .slide img {
+    width: 100%;
+    height: 100%;
+}
+.event-details-container {
+    opacity: 0.9;
+}
+.event-details-container:hover {
+    opacity: 1;
+}
+}
+/* End Events Section */
