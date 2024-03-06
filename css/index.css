@@ -88,7 +88,7 @@ html {
     background-color: black;
     height: 100%;
     width: 100%;
-    opacity: 0.4;
+    opacity: 0.3;
     z-index: -1;
 }
 
@@ -107,8 +107,9 @@ html {
     align-items: center;
     background-color: var(--secondary-color);
     border-radius: 15px;
-    /* border: 2px solid white; */
     transition: 0.5s;
+    z-index: -3;
+    position: relative;
 }
 
 .header .logo img {
@@ -134,7 +135,6 @@ nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     margin: 15px;
 }
 
@@ -257,15 +257,17 @@ nav li a {
     position: relative;
 }
 
-.header button {
+.header .bt1 {
     font-size: 18px;
     padding: 8px 20px;
     border-radius: 7px;
     font-weight: bold;
-    background-color: white;
-    border-color: transparent;
+    background-color: #1640D6;
+    /* border-color: transparent; */
+    border: 1px solid black;
+    color: white;
     transition-duration: 0.3s;
-    z-index: 20;
+    /* z-index: 20; */
 }
 
 .header button::before {
@@ -276,14 +278,21 @@ nav li a {
     position: absolute;
     border-radius: 7px;
     left: 20px;
-    top: 10px;
-    z-index: 0;
+    top: 9px;
+    z-index: -1;
+    transition: .3s;
 }
 
 .header .bt1:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    border-color: #1640D6;
+    color: black;
     cursor: pointer;
+}
+.header button:hover::before {
+    cursor: default;
+    transform: translate(10px,5px);
+    z-index: -2;
 }
 
 nav .icon {
@@ -363,10 +372,6 @@ nav .icon span {
         margin: 0;
     }
 
-    /* .header .container:has(.links:hover){
-        height: 125px;
-        align-items: normal;
-    } */
     nav .icon {
         display: flex;
     }
@@ -808,19 +813,41 @@ transform:rotate(360deg); */
     top: 210px;
 }
 
-.announce .text button {
-    border: 0px;
-    background-color: black;
-    color: white;
-    padding: 15px 20px;
+.announce .bt1 {
+    font-size: 18px;
+    padding: 8px 20px;
     border-radius: 7px;
-    font-weight: 600;
-    transition: 0.5s;
+    font-weight: bold;
+    background-color: #1640D6;
+    border: 1px solid black;
+    color: white;
+    transition-duration: 0.3s;
+    position: relative;
 }
 
-.announce .text button:hover {
-    background-color: var(--main-color);
-    transform: scale(1.1);
+.announce button::before {
+    content: "";
+    background-color: black;
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    border-radius: 7px;
+    left: 25px;
+    top: 9px;
+    z-index: -1;
+    transition: .3s;
+}
+
+.announce .bt1:hover {
+    background-color: white;
+    border-color: #1640D6;
+    color: black;
+    cursor: pointer;
+}
+.announce button:hover::before {
+    cursor: default;
+    transform: translate(10px,5px);
+    z-index: -2;
 }
 
 @media (max-width: 991px) {
