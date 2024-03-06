@@ -46,7 +46,7 @@ html{
     margin: 30px 0 0 0;
 }
 .special-heading h2{
-    color: var(--secondary-color);
+    /* color: var(--secondary-color); */
     font-size: 50px;
     font-weight: 800;
     margin-top: 0;
@@ -60,43 +60,10 @@ html{
         font-size: 35px;
     }
 }
-
-@keyframes rotation{
-    from{
-        transform: rotate(0);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}
-.rot{
-    animation-name: rotation;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    position: absolute;
-    opacity: .2;
-    width: 200px;
-    top:100px;
-    z-index: -1;
-}
-.rot--normal{
-    left:-100px;
-}
-.rot--reverse{
-    animation-direction: reverse;
-    right: -100px;
-}
-.rot--reverse2{
-    animation-duration: 4s;
-    right: -60px;
-    top: 295px;
-    width: 90px;
-}
 /* End Components */
 /* Header section */
 .bigheader{
-    background-image: url(/imgs/back2.jpg);
+    background-image: url(/back2.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -175,6 +142,75 @@ nav li a::after{
 nav li a:hover::after{
     width: 100%;
 }
+nav ul .eve{
+    position: relative;
+    margin-right: 10px;
+}
+nav ul .eve::after{
+    content: "";
+    border-width: 7px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    position: absolute;
+    right: -17px;
+    top: 17px;
+    transition: .3s;
+}
+nav ul li ul{
+    position: absolute;
+    flex-direction: column;
+    left: -20px;
+    top: 43px;
+    background-color: #e7e2e263;
+    min-width: 150px;
+    padding: 0;
+    display: none;
+}
+nav ul li:hover ul{
+    display: flex;
+}
+nav ul li ul::before{
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    height: 30px;
+    top: -25px;
+    left: 0;
+    
+}
+nav ul li ul li{
+    width: 100%;
+}
+nav ul li ul li a{
+    font-weight: 500;
+    color: var(--second-color);
+}
+nav li ul a::after{
+    background-color: transparent;
+}
+nav ul li ul li:hover a {
+    transform: translateX(15px);
+}
+nav ul .eve:hover::after{
+    transform: rotate(90deg);
+    right: -7px;
+    top: 15px;;
+}
+nav ul li ul li:hover a{
+    color: var(--main-color);
+}
+nav ul li ul li:hover {
+    background-color: white;
+}
+nav li a{
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 18px;
+    font-weight: 200;
+    transition-duration: .2s;
+    margin: 0;
+}
 .header .but{
     position: relative;
 }
@@ -183,16 +219,12 @@ nav li a:hover::after{
     padding: 8px 20px;
     border-radius: 7px;
     font-weight: bold;
-}
-.header .bt1{
     background-color: white;
-    color: var(--secondary-color);
     border-color: transparent;
     transition-duration: .3s;
-    position: relative;
-    z-index: 4;
+    z-index: 20;
 }
-.header .bt1::before{
+.header button::before{
     content: "";
     background-color: black;
     width: 90%;
@@ -201,7 +233,7 @@ nav li a:hover::after{
     border-radius: 7px;
     left: 20px;
     top: 10px;
-    z-index: 3;
+    z-index: 0;
 }
 .header .bt1:hover{
     background-color: black;
@@ -254,6 +286,15 @@ nav .icon span{
         right: 0;
         
     }
+    nav .links:hover ul{
+        display: flex;
+    }
+    nav .links:hover ul li ul{
+        display: none;
+    }
+    nav .eve::after {
+        display: none;
+    }
     nav li{
         padding: 0;
     }
@@ -283,9 +324,6 @@ nav .icon span{
     }
     nav .icon:hover span:nth-child(3){
         transform: rotate(-45deg) translateY(-10px);
-    }
-    nav .links:hover ul{
-        display: flex;
     }
 }
 @media (max-width: 480px){
@@ -355,10 +393,28 @@ nav .icon span{
 /* Start Announce Section */
 .announce .content{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px 0;
 }
 .announce .phone{
     position: relative;
+}
+.announce .content .text span {
+    background: -webkit-linear-gradient(330deg, #1580c8, #7ac0d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.announce .content .text h2{
+    font-size: 45px;
+    max-width: 400px;
+    margin-bottom: 0;
+}
+.announce .content .text p{
+    font-size: 16px;
+    max-width: 400px;
+    color: #8c8989;
+    margin: 15px 0;
 }
 .announce .content .phone .gif{
     width: 500px;
@@ -370,7 +426,54 @@ nav .icon span{
     left: 67px;
     top:210px ;
 }
+.announce .text button{
+    border: 0px;
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: .5s;
+}
+.announce .text button:hover{
+    background-color: var(--main-color);
+    transform: scale(1.1);
+}
 @media (max-width: 991px){
+    .announce .container{
+        padding: 0 40px;
+    }
+    .announce .content .text h2{
+        font-size: 30px;
+        max-width: 250px;
+    }
+    .announce .content .text p{
+        font-size: 14px;
+        max-width: 300px;
+    }
+    .announce .content .phone .gif{
+        width: 300px;
+    }
+    .announce .content .appicon{
+        width: 50px;
+        height: 55px;
+        position: absolute;
+        left: 40px;
+        top:120px ;
+    }
+}
+@media (max-width: 767px){
+    .announce .content{
+        flex-direction: column-reverse ;
+    }
+    .announce .content .text h2{
+        font-size: 30px;
+        max-width: 250px;
+    }
+    .announce .content .text p{
+        font-size: 14px;
+        max-width: 300px;
+    }
     .announce .content .phone .gif{
         width: 300px;
     }
@@ -434,7 +537,6 @@ nav .icon span{
     font-size: 50px;
     text-align: center;
     background: -webkit-linear-gradient(330deg, #1580c8, #7ac0d0);
-    /* -webkit-linear-gradient(330deg, #0694f3, #56cdf7) */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 2rem;
