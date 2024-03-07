@@ -73,3 +73,26 @@ sliderContainer.addEventListener("mouseleave", () => {
   startSlideShow();
   //   document.querySelector(".event-details-container").style.opacity = "1";
 });
+
+// Navbar
+
+const navEl = document.querySelector(".links");
+const navIcon = document.querySelector(".links .icon");
+const overlayEl = document.querySelector(".overlay");
+
+const removeNav = () => {
+  navEl.classList.remove("active");
+  overlayEl.classList.remove("show");
+};
+
+navIcon.addEventListener("click", () => {
+  navEl.classList.toggle("active");
+  overlayEl.classList.toggle("show");
+});
+
+overlayEl.addEventListener("click", () => {
+  removeNav();
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") removeNav();
+});
