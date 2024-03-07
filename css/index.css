@@ -1469,9 +1469,11 @@ h3:hover {
 /* start Sponsers Section */
 .sponsers .content{
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(130px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(130px,200px));
     gap: 30px;
     margin-bottom: 200px;
+    justify-content: space-between;
+    align-items: center;
 }
 .sponsers .sp{
     display: flex;
@@ -1494,7 +1496,7 @@ h3:hover {
 }
 @media (min-width:767px){
     .sponsers .content{
-        grid-template-columns: repeat(4,minmax(130px,1fr));
+        grid-template-columns: repeat(4,minmax(130px,160px));
     }
 }
 /* End Sponsers Section */
