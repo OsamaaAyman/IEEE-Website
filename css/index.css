@@ -74,7 +74,14 @@ html {
 
 @media (max-width: 991px) {
     .special-heading h2 {
-        font-size: 35px;
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .special-heading h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
     }
 }
 
@@ -525,6 +532,81 @@ nav .icon span {
 
 /* End intro Section */
 /* Start about Section */
+.bluecontainer {
+    background-image: linear-gradient(#5690FF, #1c61e0);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.whatwedo {
+    border-left: rgb(111, 110, 110, 0.2) solid 1px;
+    margin: 10px 0 0;
+    color: black;
+    text-align: left;
+    padding: 10px;
+}
+
+.h4 {
+    margin-top: 10px;
+    color: white;
+    font-size: 40px;
+    /* padding: 20px; */
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.bluecontainer .cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    column-gap: 60px;
+    row-gap: 30px;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatwedo h4 {
+    color: #1c61e0;
+    padding: 10px 0px;
+    font-size: 23px;
+}
+
+.bluecontainer .cards .ico {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bluecontainer .cards .wo {
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    /* margin:; */
+    justify-content: space-evenly;
+    padding: 2px;
+}
+
+.bluecontainer .cards img {
+    max-width: 100%;
+}
+
+.cards #third {
+    grid-column: span 2;
+}
+
+@media screen and (max-width:991px) {
+    .bluecontainer .cards {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .cards #third {
+        grid-column: span 1;
+    }
+}
 
 .yasmeen_container1 {
     padding: 0px 40px;
@@ -794,10 +876,31 @@ transform:rotate(360deg); */
     }
 
     .yicons {
-        flex-direction: column;
-        /* background-color: red; */
+
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         align-items: center;
-        height: 1000px;
+        column-gap: 10px;
+    }
+
+    .yicons li {
+        margin: 5px 0px;
+        width: 47%;
+        height: 170px;
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .yicons li i {
+
+        font-size: 30px;
+    }
+
+    .yicons li p {
+        width: auto;
+        height: auto;
     }
 
     .shapecross {
@@ -823,7 +926,16 @@ transform:rotate(360deg); */
     }
 }
 
-@media screen and (min-width: 601px) and (max-width: 1000px) {
+@media screen and (max-width: 480px) {
+
+    .yicons li {
+        height: 120px;
+    }
+
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 1300px) {
     .shapelines {
         display: none;
     }
@@ -871,9 +983,10 @@ transform:rotate(360deg); */
 
 /* End about Section */
 /* Start Announce Section */
-.announce{
+.announce {
     margin-top: 70px;
 }
+
 .announce .content {
     display: flex;
     justify-content: space-between;
@@ -1467,24 +1580,27 @@ h3:hover {
 
 /* End Events Section */
 /* start Sponsers Section */
-.sponsers .content{
+.sponsers .content {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(130px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     gap: 30px;
     margin-bottom: 200px;
     justify-content: space-between;
     align-items: center;
 }
-.sponsers .sp{
+
+.sponsers .sp {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.sponsers .sp img{
+
+.sponsers .sp img {
     max-width: 100%;
     text-align: center;
 }
-.sponsers #blanco{
+
+.sponsers #blanco {
     background-color: rgba(0, 0, 0, 0.797);
     border-radius: 50%;
     width: 100%;
@@ -1492,13 +1608,15 @@ h3:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;    
+    text-align: center;
 }
-@media (min-width:767px){
-    .sponsers .content{
-        grid-template-columns: repeat(4,minmax(130px,160px));
+
+@media (min-width:767px) {
+    .sponsers .content {
+        grid-template-columns: repeat(4, minmax(130px, 160px));
     }
 }
+
 /* End Sponsers Section */
 /* Start Footer Section */
 
@@ -1747,7 +1865,7 @@ h3:hover {
         padding-right: 20px;
         padding-left: 10px;
         text-align: left;
-        
+
     }
 
     .footer .subscirbe .sec .btn {
