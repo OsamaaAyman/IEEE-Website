@@ -38,7 +38,7 @@ html {
 /* Medium */
 @media (min-width: 992px) {
     .container {
-        width: 299px;
+        width: 1000px;
     }
 }
 
@@ -154,14 +154,17 @@ nav ul {
 nav ul li {
     margin: 0 10px;
 }
-nav ul li:nth-child(4){
+
+nav ul li:nth-child(4) {
     margin-right: 60px;
 }
-@media (max-width:845px){
-    nav ul li:nth-child(4){
+
+@media (max-width:845px) {
+    nav ul li:nth-child(4) {
         margin-right: 0;
     }
 }
+
 nav li a {
     position: relative;
     display: block;
@@ -337,9 +340,6 @@ nav .icon span {
         font-size: 17px;
     }
 
-    .header .container {
-        width: 90%;
-    }
 }
 
 @media (max-width: 855px) {
@@ -466,10 +466,17 @@ nav .icon span {
         column-gap: 0px;
     }
 
-    nav .links ul {}
+    .header {
+        padding: 30px 15px;
+    }
 
     .header .container {
         width: 100%;
+    }
+
+    .header .container {
+        width: 100%;
+        padding: 0;
     }
 }
 
@@ -1344,50 +1351,56 @@ transform:rotate(360deg); */
     .container {
         width: 100%;
     }
-    
+
     .slider .slide.prev {
         transform: translateX(100%);
     }
-    
+
     .slider .slide img {
         width: 100%;
         height: 100%;
     }
-    
+
     .event-details-container {
         opacity: 0.9;
     }
-    
+
     .event-details-container:hover {
         opacity: 1;
     }
 }
+
 @media only screen and (max-width: 480px) {
     .event-details-container .countdown .box .time {
         font-weight: 600;
         font-size: 26px;
     }
+
     .event-details-container .countdown .box .text {
         font-weight: 400;
         font-size: 17px;
     }
 }
+
 /* Start speakers Section */
-.speakers{
+.speakers {
     padding: 60px 0;
     background-color: var(--section-grey);
 }
-.speakers .content{
+
+.speakers .content {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr)) ;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 30px;
     margin-top: 80px;
     position: relative;
 }
-.speakers .card{
+
+.speakers .card {
     background-color: white;
     position: relative;
 }
+
 .speakers .social {
     display: flex;
     margin-bottom: 20px;
@@ -1397,7 +1410,7 @@ transform:rotate(360deg); */
     right: 10px;
     z-index: 2;
     opacity: 0;
-    transition: 1s .2s linear ;
+    transition: 1s .2s linear;
 }
 
 .speakers .ico {
@@ -1414,25 +1427,28 @@ transform:rotate(360deg); */
     opacity: 1;
     transform: scale(1.25);
 }
+
 .speakers .card:hover .social {
     opacity: 1;
 }
 
-.speakers .image{
+.speakers .image {
     overflow: hidden;
     /* height: 295px; */
     position: relative;
 }
-.speakers .layer{
-        position: absolute;
-        background-color: black;
-        height: 100%;
-        width: 0;
-        opacity: 0.4;
-        z-index: 1;
-        transition: .5s;
+
+.speakers .layer {
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 0;
+    opacity: 0.4;
+    z-index: 1;
+    transition: .5s;
 }
-.speakers .time{
+
+.speakers .time {
     background-color: white;
     color: black;
     position: absolute;
@@ -1444,16 +1460,19 @@ transform:rotate(360deg); */
     transition: .5s;
     opacity: .8;
 }
-.speakers .card:hover .time{
+
+.speakers .card:hover .time {
     opacity: .1;
 }
-.speakers .time p{
+
+.speakers .time p {
     padding: 0;
     margin: 0;
     font-size: 14px;
     font-weight: 600;
 }
-.speakers .text{
+
+.speakers .text {
     padding: 20px;
     position: absolute;
     bottom: 10px;
@@ -1461,47 +1480,57 @@ transform:rotate(360deg); */
     color: white;
     /* display: none; */
     opacity: 0;
-    transition: 1s .2s linear ;
+    transition: 1s .2s linear;
 }
-.speakers .text h2{
+
+.speakers .text h2 {
     font-size: 25px;
     font-weight: 600;
     margin: 0 10px;
 }
-.speakers .text p{
+
+.speakers .text p {
     line-height: 1.5;
     margin: 5px 10px;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.66);
 }
-.speakers .card img{
+
+.speakers .card img {
     max-width: 100%;
     transition-duration: 1.5s;
     transition-timing-function: ease-in-out;
     z-index: 0;
 }
-.speakers .card:hover .text{
+
+.speakers .card:hover .text {
     opacity: 1;
 }
-.speakers .card:hover .social{
+
+.speakers .card:hover .social {
     display: flex;
 }
-.speakers .card:hover .layer{
+
+.speakers .card:hover .layer {
     width: 100%;
 }
-.speakers .card:hover{
+
+.speakers .card:hover {
     cursor: pointer;
 }
-.speakers .card:hover img{
-    transform: scale(1.2) translate(30px,20px);
+
+.speakers .card:hover img {
+    transform: scale(1.2) translate(30px, 20px);
     z-index: 0;
 }
+
 @media (max-width:1150px) {
-    .speakers .content{
-        grid-template-columns: repeat(auto-fill,minmax(200px,1fr)) ;
+    .speakers .content {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
-    
+
 }
+
 /* End speakers Section */
 .moataz_container {
     width: 100%;
@@ -1631,12 +1660,13 @@ h3:hover {
     gap: 7px;
 }
 
-.row>div img{
+.row>div img {
     transition: 0.7s ease-in-out;
     max-height: 100%;
 }
+
 .row>div img:hover {
-        transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .three {
@@ -1745,17 +1775,6 @@ h3:hover {
 
 .sponsers .sp img {
     max-width: 100%;
-    text-align: center;
-}
-
-.sponsers #blanco {
-    background-color: rgba(0, 0, 0, 0.797);
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 
