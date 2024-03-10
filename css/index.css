@@ -157,6 +157,11 @@ nav ul li {
 nav ul li:nth-child(4){
     margin-right: 60px;
 }
+@media (max-width:845px){
+    nav ul li:nth-child(4){
+        margin-right: 0;
+    }
+}
 nav li a {
     position: relative;
     display: block;
