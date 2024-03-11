@@ -1586,6 +1586,25 @@ transform:rotate(360deg); */
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    transition: 1s;
+}
+.osevents .card:hover {
+    background-position-x: 1200px;
+    background-position-y: 500px;
+    background-size: 1200px;
+    background-blend-mode: exclusion ;
+}
+.osevents .card-smaller:hover {
+    background-position-x: 620px;
+    background-position-y: 450px;
+    background-size: 1000px;
+
+}
+.osevents .card--bw:hover {
+    background-blend-mode:luminosity ;
+}
+.osevents .card--bw:hover .description  {
+    color: white ;
 }
 .osevents .layer {
     position: absolute;
@@ -1642,7 +1661,7 @@ transform:rotate(360deg); */
     line-height: 1.5;
     margin: 0px 10px 20px;
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.66);
+    color: rgba(255, 255, 255, 0.767);
     min-width: 400px;
     transition: .6s;
 }
