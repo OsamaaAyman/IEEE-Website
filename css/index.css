@@ -1414,7 +1414,9 @@ transform:rotate(360deg); */
     padding: 60px 0;
     background-color: var(--section-grey);
 }
-
+.speakers .container{
+    /* width: 85%; */
+}
 .speakers .content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -1525,7 +1527,7 @@ transform:rotate(360deg); */
 
 .speakers .card img {
     max-width: 100%;
-    transition-duration: 1.5s;
+    transition-duration: .8s;
     transition-timing-function: ease-in-out;
     z-index: 0;
 }
@@ -1565,7 +1567,7 @@ transform:rotate(360deg); */
     background-color: var(--section-grey);
 }
 .osevents .container{
-    width: 85%;
+    width: 80%;
 }
 .osevents .content {
     display: grid;
@@ -1800,6 +1802,9 @@ transform:rotate(360deg); */
 }
 
 /* End speakers Section */
+.events .container{
+    width: 85%;
+}
 .moataz_container {
     width: 100%;
     display: flex;
@@ -1808,7 +1813,6 @@ transform:rotate(360deg); */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-top: 90px;
     padding-bottom: 40px;
 }
 
@@ -1992,7 +1996,13 @@ h3:hover {
       margin-bottom: 50px;
   } */
 }
-
+.event .image{
+    max-height: 100px;
+    overflow: hidden;
+}
+.event .image img{
+    max-height: 100%;
+}
 @media screen and (max-width: 450px) {
     .one>span {
         font-size: 33px;
