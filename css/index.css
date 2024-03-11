@@ -1565,7 +1565,7 @@ transform:rotate(360deg); */
     background-color: var(--section-grey);
 }
 .osevents .container{
-    width: 95%;
+    width: 85%;
 }
 .osevents .content {
     display: grid;
@@ -1739,6 +1739,11 @@ transform:rotate(360deg); */
         opacity: .8;
     }
 
+}
+@media (max-width:767px) {
+    .osevents .container{
+        width: 97%;
+    }
 }
 @media (max-width:480px) {
     .osevents .card .text .title h2{
