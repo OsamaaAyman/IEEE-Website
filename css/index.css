@@ -89,6 +89,27 @@ body {
     background-image: url("../imgs/Screenshot\ 2024-03-07\ 171452.png");
 }
 
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 8px;
+    height: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
 /* End Components */
 /* Header section */
 .bigheader {
@@ -216,7 +237,7 @@ nav ul li ul {
     position: absolute;
     flex-direction: column;
     left: -20px;
-    top: 43px;
+    top: 44px;
     background-color: #e7e2e263;
     min-width: 150px;
     padding: 0;
