@@ -3,7 +3,7 @@ const hoursEl = document.querySelector(".countdown .hours .time");
 const minsEl = document.querySelector(".countdown .mins .time");
 const secEl = document.querySelector(".countdown .secs .time");
 
-const eventDate = new Date("2024 3 9 9:00").getTime();
+const eventDate = new Date("2024 3 22 9:00").getTime();
 const min = 60 * 1000;
 const hour = 60 * min;
 const day = 24 * hour;

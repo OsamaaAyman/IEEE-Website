@@ -1723,29 +1723,29 @@ transform:rotate(360deg); */
 
 @media (max-width:991px) {
     .osevents .card:hover .text .title h2{
-        transform: translate(-120px,-20px);
+        transform: translate(-100px,-20px);
         cursor: pointer;
     }
     .osevents .card:hover .text .title p{
-        transform: translate(-240px,-20px);
+        transform: translate(-220px,-20px);
     }
     .osevents .card:hover .text .description{
         opacity: 1;
-        transform: translateX(-90px);
+        transform: translateX(-70px);
         position: relative;
     }
     .osevents .card:hover .bt1{
-        transform: translateX(-205px);
+        transform: translateX(-185px);
         opacity: .8;
     }
 
-}
-@media (max-width:767px) {
     .osevents .container{
         width: 97%;
     }
 }
-@media (max-width:480px) {
+/* @media (max-width:767px) {
+} */
+@media (max-width:600px) {
     .osevents .card .text .title h2{
         font-size: 40px;
     }
