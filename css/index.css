@@ -1655,7 +1655,7 @@ transform:rotate(360deg); */
     position: absolute;
     opacity: 0;
     transform: translateX(100px);
-    /* max-width: 200px; */
+    max-width: 300px;
     transition: .5s .2s ease-out;
 }
 .osevents .card:hover .text .description{
