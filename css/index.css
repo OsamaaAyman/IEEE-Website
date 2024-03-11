@@ -360,6 +360,9 @@ nav .icon span {
     nav ul a {
         font-size: 17px;
     }
+    .header .container {
+        width: 85%;
+    }
 
 }
 
@@ -1032,7 +1035,9 @@ transform:rotate(360deg); */
 .announce .phone {
     position: relative;
 }
-
+.announce .content .text{
+    margin-right: 20px;
+}
 .announce .content .text span {
     background: -webkit-linear-gradient(330deg, #1580c8, #7ac0d0);
     -webkit-background-clip: text;
@@ -1063,6 +1068,7 @@ transform:rotate(360deg); */
     left: 67px;
     top: 210px;
 }
+
 
 .announce .bt1 {
     font-size: 18px;
@@ -1545,9 +1551,226 @@ transform:rotate(360deg); */
     z-index: 0;
 }
 
-@media (max-width:1150px) {
+@media (max-width:991px) {
     .speakers .content {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+}
+
+/* End speakers Section */
+/* Start events Section */
+.osevents {
+    padding: 60px 0;
+    background-color: var(--section-grey);
+}
+.osevents .container{
+    width: 95%;
+}
+.osevents .content {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 80px;
+    position: relative;
+}
+
+.osevents .card {
+    background-color: white;
+    position: relative;
+    background-image: url(../imgs/embark15935789.png);
+    background-position: left;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.osevents .layer {
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    /* width: 0; */
+    opacity: 0.4;
+    z-index: 0;
+    transition: .5s;
+}
+.osevents .text {
+    padding: 20px;
+    bottom: 10px;
+    z-index: 2;
+    color: white;
+    color: white;
+    text-align: center;
+    transition: .4s; 
+}
+
+.osevents .card:hover .shadow{
+    transform: translatex(8px);
+}
+
+.osevents .text .title{
+    position: relative;
+    transition: .5s;
+}
+.osevents .text h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0 10px;
+    z-index: 3;
+    color: #007bff;
+    transition: .6s;
+}
+.osevents .text .shadow {
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    width: 100%;
+    top: -3px;
+    right: -3px;
+    z-index: 1;
+    margin: 0 10px;
+}
+.osevents .card:hover .text .title h2{
+    transform: translate(-240px,-20px);
+    cursor: pointer;
+}
+
+.osevents .text p {
+    line-height: 1.5;
+    margin: 0px 10px 20px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.66);
+    min-width: 400px;
+    transition: .6s;
+}
+.osevents .card:hover .text .title p{
+    transform: translate(-360px,-20px);
+}
+.osevents .text .description{
+    font-size: 13px;
+    text-align: left;
+    position: absolute;
+    opacity: 0;
+    transform: translateX(100px);
+    /* max-width: 200px; */
+    transition: .5s .2s ease-out;
+}
+.osevents .card:hover .text .description{
+    opacity: 1;
+    transform: translateX(-210px);
+    position: relative;
+}
+
+.osevents .bt1 {
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    background-color: #7D0A0A;
+    border: 0;
+    color: white;
+    font-weight: 500;
+    transition-duration: 0.7s;
+    opacity: 0;
+}
+.osevents .bt1:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.osevents .card:hover .bt1{
+    transform: translateX(-325px);
+    opacity: .8;
+}
+.osevents button:hover::before {
+    cursor: default;
+    transform: translate(10px, 5px);
+    z-index: -2;
+}
+
+.osevents .time {
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    padding: 8px;
+    border-radius: 8px;
+    z-index: 2;
+    transition: .5s;
+    opacity: .8;
+}
+
+.osevents .card:hover .time {
+    opacity: .1;
+}
+
+.osevents .time p {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.osevents .card:hover .text {
+    opacity: 1;
+}
+.osevents .card:hover .layer {
+    width: 100%;
+}
+
+@media (max-width:991px) {
+    .osevents .card:hover .text .title h2{
+        transform: translate(-120px,-20px);
+        cursor: pointer;
+    }
+    .osevents .card:hover .text .title p{
+        transform: translate(-240px,-20px);
+    }
+    .osevents .card:hover .text .description{
+        opacity: 1;
+        transform: translateX(-90px);
+        position: relative;
+    }
+    .osevents .card:hover .bt1{
+        transform: translateX(-205px);
+        opacity: .8;
+    }
+
+}
+@media (max-width:480px) {
+    .osevents .card .text .title h2{
+        font-size: 40px;
+    }
+    .osevents .card .text .title p{
+        font-size: 15px;
+    }
+    .osevents .card .text .description p{
+        font-size: 9px;
+        max-width: 50px;
+        min-height: 600px;
+        max-width: 100px;
+    }
+    .osevents .card .bt1{
+        font-size: 14px;
+    }
+    .osevents .card:hover .text .title h2{
+        transform: translate(-10px,-20px);
+        cursor: pointer;
+    }
+    .osevents .card:hover .text .title p{
+        transform: translate(-110px,-20px);
+    }
+    .osevents .card:hover .text .description{
+        opacity: 1;
+        transform: translateX(50px);
+        position: relative;
+    }
+    .osevents .card:hover .bt1{
+        transform: translateX(-65px);
+        opacity: .8;
     }
 
 }
