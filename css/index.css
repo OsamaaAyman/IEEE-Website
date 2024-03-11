@@ -1,6 +1,6 @@
 :root {
     --main-color: #366db4;
-    --secondary-color: #2e5287;
+    --secondary-color: #1640d6;
 }
 
 * {
@@ -825,7 +825,7 @@ transform:rotate(360deg); */
     padding-top: 50px;
     font-weight: bold;
     font-size: 50px;
-    color: rgb(87, 124, 216);
+    color: #1640d6;
 }
 
 .yasmeen_container2 {
