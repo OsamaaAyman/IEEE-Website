@@ -31,7 +31,7 @@ const countdown = () => {
 
 let timer = setInterval(countdown, 1000);
 
-//SlideShow
+// auto SlideShow
 const sliderContainer = document.querySelector(".slider");
 const slides = document.querySelectorAll(".slider .slide");
 
@@ -67,12 +67,12 @@ startSlideShow();
 
 sliderContainer.addEventListener("mouseover", () => {
   stopSlideShow();
-  //   document.querySelector(".event-details-container").style.opacity = ".8";
 });
 sliderContainer.addEventListener("mouseleave", () => {
   startSlideShow();
-  //   document.querySelector(".event-details-container").style.opacity = "1";
 });
+
+// end auto slideShow
 
 // Navbar
 
@@ -96,3 +96,44 @@ overlayEl.addEventListener("click", () => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") removeNav();
 });
+
+const headsSlides = document.querySelectorAll(".yasmeen-heads .heads-slides .filter");
+const headsSlidesContainer = document.querySelector(".yasmeen-heads .heads-slides");
+
+// heads section slider
+let currHeadsSlide = 0;
+
+const updateSlideShow = (direction = "auto") => {
+  let size = 4;
+  if (window.innerWidth < 860) {
+    size = 3;
+  }
+  const headSlideWidth = headsSlides[0].clientWidth;
+
+  if (direction === "auto") {
+      currHeadsSlide = (currHeadsSlide + 1) % (headsSlides.length-3);
+  
+    headsSlidesContainer.style.transform = `translateX(-${
+      currHeadsSlide * headSlideWidth
+    }px)`;
+  }
+};
+
+let headerSliderShow;
+const startHeadsSlider = () => {
+  headerSliderShow = setInterval(updateSlideShow, 2200);
+};
+
+const stopHeadsSlider = () => {
+  clearInterval(headerSliderShow);
+};
+
+startHeadsSlider();
+// headsSlidesContainer.addEventListener("mouseover", () => {
+//   console.log("entered");
+//   stopHeadsSlider();
+// });
+// headsSlidesContainer.addEventListener("mouseleave", () => {
+//   console.log("left");
+//   startHeadsSlider();
+// });
