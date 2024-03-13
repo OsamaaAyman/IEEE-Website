@@ -837,7 +837,7 @@ nav .icon span {
 
 .yasmeen-heads {
     overflow: hidden;
-    width: 80%;
+    width: 85%;
     margin: auto;
 }
 
@@ -852,7 +852,7 @@ nav .icon span {
 }
 
 .yasmeen-heads .filter .himg {
-    min-width: 260px;
+    min-width: 280px;
 }
 
 @keyframes round-01 {
