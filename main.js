@@ -79,20 +79,23 @@ sliderContainer.addEventListener("mouseleave", () => {
 const navEl = document.querySelector(".links");
 const navIcon = document.querySelector(".links .icon");
 const overlayEl = document.querySelector(".overlay");
-
+const navli= document.querySelectorAll("a");
 const removeNav = () => {
   navEl.classList.remove("active");
   overlayEl.classList.remove("show");
+  document.body.classList.remove("active");
 };
 
 navIcon.addEventListener("click", () => {
   navEl.classList.toggle("active");
   overlayEl.classList.toggle("show");
+  document.body.classList.toggle("active");
 });
 
 overlayEl.addEventListener("click", () => {
   removeNav();
 });
+navli.forEach(li => li.addEventListener('click', removeNav));
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") removeNav();
 });
@@ -129,11 +132,3 @@ const stopHeadsSlider = () => {
 };
 
 startHeadsSlider();
-// headsSlidesContainer.addEventListener("mouseover", () => {
-//   console.log("entered");
-//   stopHeadsSlider();
-// });
-// headsSlidesContainer.addEventListener("mouseleave", () => {
-//   console.log("left");
-//   startHeadsSlider();
-// });
