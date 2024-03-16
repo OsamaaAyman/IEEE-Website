@@ -1679,8 +1679,11 @@ nav .icon span {
 }
 
 .osevents .card:hover .text .title h2 {
-    transform: translate(-240px, -20px);
+    transform: translate(-240px, -10px);
     cursor: pointer;
+}
+.osevents .card:hover .text .code {
+    transform: translate(10px, 15px);
 }
 
 .osevents .text p {
@@ -1693,9 +1696,12 @@ nav .icon span {
 }
 
 .osevents .card:hover .text .title p {
-    transform: translate(-360px, -20px);
+    transform: translate(-360px, -10px);
 }
 
+.osevents .card:hover .text .code p{
+    transform: translate(-380px, -10px);
+}
 .osevents .text .description {
     font-size: 13px;
     text-align: left;
@@ -1803,6 +1809,7 @@ nav .icon span {
 @media (max-width: 600px) {
     .osevents .card .text .title h2 {
         font-size: 40px;
+        transition: 1.5s;
     }
 
     .osevents .card .text .title p {
@@ -1822,10 +1829,6 @@ nav .icon span {
 
     .osevents .card:hover .text .title h2 {
         transform: translate(-10px, -0px);
-        cursor: pointer;
-    }
-    .osevents .card:hover .text .title .code {
-        transform: translate(0px, -0px);
         cursor: pointer;
     }
 
