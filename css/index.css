@@ -1701,6 +1701,7 @@ nav .icon span {
     position: absolute;
     opacity: 0;
     transform: translateX(100px);
+    min-width: 200px;
     max-width: 300px;
     transition: 0.5s 0.2s ease-out;
 }
@@ -1819,12 +1820,16 @@ nav .icon span {
     }
 
     .osevents .card:hover .text .title h2 {
-        transform: translate(-10px, -20px);
+        transform: translate(-10px, -0px);
+        cursor: pointer;
+    }
+    .osevents .card:hover .text .title .code {
+        transform: translate(0px, -0px);
         cursor: pointer;
     }
 
     .osevents .card:hover .text .title p {
-        transform: translate(-110px, -20px);
+        transform: translate(-110px, -0px);
     }
 
     .osevents .card:hover .text .description {
