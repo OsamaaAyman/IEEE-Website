@@ -455,6 +455,7 @@ nav .icon span {
         font-weight: 400;
         transition-duration: 0.2s;
         margin: 0;
+        transform: translateY(-40px);
     }
 
     nav .icon {
