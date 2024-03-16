@@ -388,14 +388,13 @@ nav .icon span {
         /* transform: translateX(110%); */
         height: calc(100vh - 100px);
         text-align: center;
-        padding-top: 2rem;
         background-color: var(--secondary-color);
         transition: transform 1s;
         padding-left: 0;
         border-radius: 8px;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     nav ul::before {
